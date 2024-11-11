@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: antiquewhite;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(161, 206, 206);
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background-color: antiquewhite;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+}
+
+.content h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.extra-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.extra-section div {
+  background-color: #ffecb3;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.extra-section .wide {
+  grid-column: span 2;
+}
+
+.sidebar {
+  background-color: #d3ffd3;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  background-color: #d3d3d3;
+  padding: 20px;
+}
+
+.footer div {
+  background-color: #f0f0f5;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
